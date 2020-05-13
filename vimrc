@@ -19,6 +19,9 @@ let python_highlight_all=1
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins
+" for the vim-snazzy plugin, I had to manually copy
+" .vim/plugged/vim-snazzy/colors to .vim/colors
+" probably something to do with the path vim is looking for colors files
 Plug 'connorholyday/vim-snazzy'
 Plug 'valloric/youcompleteme'
 Plug 'aserebryakov/vim-todo-lists'
