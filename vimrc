@@ -1,31 +1,40 @@
-" Syntax highlighting as well as Pythonic spacing
-syntax on
-colorscheme snazzy
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+" Theme stuff
+syntax enable
 
-" I like being able to see character numbers as well
+" Pythonic line/space formatting
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab showmatch 
+
+" Relative line numbers, highlighting current line
 set ruler
-
-" Setting hybrid line numbers and aligning them left
-" LineNR toggles highlighting the current line
 set nu rnu
 set numberwidth=1
 hi LineNr ctermfg=220
 
-" pretty python code
+"Theme stuff
+colorscheme snazzy
+
+" Pretty python code
 let python_highlight_all=1
 
-" Plugins will be downloaded under the specified directory.
+" Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
-" Declare the list of plugins
-" for the vim-snazzy plugin, I had to manually copy
-" .vim/plugged/vim-snazzy/colors to .vim/colors
-" probably something to do with the path vim is looking for colors files
-Plug 'connorholyday/vim-snazzy'
-Plug 'valloric/youcompleteme'
-Plug 'aserebryakov/vim-todo-lists'
-Plug 'psf/black'
+" Ensure you are using single quotes
+Plug 'valloric/YouCompleteMe'
+Plug 'tmsvg/pear-tree'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
-" List ends here. Plugins become visible to Vim after this call
+" Initialize plugin system
 call plug#end()
+
+" Enable smart pairs for pear-tree 
+let g:pear_tree_smart_openers = 1
+let g:pear_tree_smart_closers = 1
+let g:pear_tree_smart_backspace = 1
+
+" This line sets the file update time to 100ms
+" By default, this value is 4s 
+" We want this to be faster for use with gitgutter
+set updatetime=100
