@@ -1,6 +1,6 @@
 # dotfiles
-My dot files for Vim/Zsh/Bash/etc.
+My dot files for Vim/Zsh/etc.
 
-I'm currently using Oh My Zsh with iTerm for work and WSL for personal projects, though I try and keep the dotfiles as similar as possible.
+I'm currently using Oh My Zsh with iTerm for work and have migrated to Manjaro personal projects, though I try and keep the dotfiles as similar as possible.
 
-Even though it's not really a standard dotfile, I did add my theme file for Windows Terminal which I'm using for WSL.
+I've also added my theme file for Windows Terminal which I'm using for WSL when I'm on Windows, and my zsh theme file.
