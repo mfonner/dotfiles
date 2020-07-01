@@ -2,7 +2,7 @@
 syntax enable
 
 " Pythonic line/space formatting
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab showmatch 
+set tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab showmatch 
 
 " Relative line numbers, highlighting current line
 set ruler

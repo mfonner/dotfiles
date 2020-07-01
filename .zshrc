@@ -105,6 +105,7 @@ alias ds2="ssh devops@devhost02"
 alias ds3="ssh devops@devhost03"
 alias ds4="ssh devops@devhost04"
 alias ds1="ssh devops@devstor01"
+alias nimbus="ssh nimbus@18.190.80.225"
 
 # Golang stuff
 export GOPATH=$HOME/code/go
