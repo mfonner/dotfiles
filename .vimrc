@@ -28,6 +28,9 @@ Plug 'tmsvg/pear-tree'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
+"Plug 'ntk148v/vim-horizon'
+Plug 'itchyny/lightline.vim'
+Plug 'sheerun/vim-polyglot'
 
 " Initialize plugin system
 call plug#end()
@@ -73,7 +76,6 @@ set hlsearch                    " Highlight found searches
 set ignorecase                  " Search case insensitive...
 set smartcase                   " ... but not when search pattern contains upper case characters
 set ttyfast
-" set ttyscroll=3               " noop on linux ?
 set lazyredraw          	      " Wait to redraw "
 
 " speed up syntax highlighting
@@ -151,34 +153,23 @@ if !v:shell_error && s:uname == "Linux" && !has('nvim')
   set ttymouse=xterm
 endif
 
-syntax enable
-if has('gui_running')
-  set transparency=3
-  " fix js regex syntax
-  set regexpengine=1
-  syntax enable
-endif
-set background=dark
-" let g:hybrid_use_Xresources = 1
-" let g:rehash256 = 1
-"colorscheme dracula 
-"set guifont=Inconsolata:h15
-set guioptions-=L
+set termguicolors
+syntax on
+let g:onedark_terminal_italics = 1 
+let g:onedark_hide_endofbuffer = 1
+let g:lightline = {'colorscheme' : 'onedark'}
+colorscheme onedark 
 
 " Coc completion menu and related highlighting
-hi Pmenu ctermbg=NONE guibg=NONE ctermfg=gray guifg=gray
-hi PmenuSel ctermbg=yellow guibg=yellow
+hi Pmenu ctermbg=6C6F93 guibg=#282C34
 
 " Parenthesis highlighting
 " Setting background to none only changes the parenthesis color themselves
 " I find this less distracting
-hi MatchParen cterm=NONE ctermbg=NONE ctermfg=red
+hi MatchParen cterm=none ctermbg=none ctermfg=red guifg=red
 
-"hi CocErrorSign ctermfg=red guifg=#e68183
-"hi CocWarningSign ctermfg=yellow guifg=#ff922b
-
-"hi NormalFloat guibg=DarkGray guifg=#323d43
-"hi CoCErrorFloat guibg=DarkGray guifg=#e68183
+hi CocErrorSign ctermfg=red 
+hi CocWarningSign ctermfg=yellow
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
