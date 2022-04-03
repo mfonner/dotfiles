@@ -19,4 +19,5 @@ GIT_PS1_SHOWUPSTREAM="auto"
 GIT_PS1_SHOWCOLORHINTS="yes"
 GIT_PS1_SHOWDIRTYSTATE="yes"
 
-PS1='\[\033[38;5;12m\]\W $(__git_ps1 "(%s)")$ \[$(tput sgr0)\]'
+#PS1='\[\033[38;5;12m\]\W $(__git_ps1 "(%s)")$ \[$(tput sgr0)\]'
+PS1='\[\033[38;5;12m\]\W \[$(tput sgr0)\]\[\033[38;5;2m\]$(__git_ps1 "(%s)")\[$(tput sgr0)\]$ \[$(tput sgr0)\]'
